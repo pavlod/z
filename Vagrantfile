@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.vm.provider "docker" do |d|
       d.image = "library/wordpress"
       d.name  = "wordpress"
-      d.ports = ["80:80"]
+      d.ports = ["8081:80"]
       d.vagrant_vagrantfile = "./Vagrantfile-hostvm"
       #d.env = { MYSQL_ROOT_PASSWORD: "root" }
       d.link("mysql:mysql")
